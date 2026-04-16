@@ -86,10 +86,14 @@ class Node{
 	   post-order traversal
 	   */
 	  
-	   public void postOrderTraversal(Node root){
-         //implement in here
-		   
-	   }
+public void postOrderTraversal(Node root){
+    if(root == null){
+        return;
+    }
+    postOrderTraversal(root.left);
+    postOrderTraversal(root.right);
+    System.out.print(root.value + " ");
+}
 	   
 	   
 	   
