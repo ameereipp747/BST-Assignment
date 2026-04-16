@@ -136,9 +136,15 @@ public int getMin(Node root){
 	   a method to find the node in the tree
 	   with a largest key
 	   */
-	   public int getMax(Node root){
-         //implement in here
-	   }
+public int getMax(Node root){
+    if(root == null){
+        throw new RuntimeException("Tree is empty");
+    }
+    while(root.right != null){
+        root = root.right;
+    }
+    return root.value;
+}
 	   
 	   
 	   
