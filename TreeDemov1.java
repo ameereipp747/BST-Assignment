@@ -120,10 +120,15 @@ public boolean find(Node root, int key){
 	   a method to find the node in the tree
 	   with a smallest key
 	   */
-	   public int getMin(Node root){
-         //implement in here
-	      
-	   }
+public int getMin(Node root){
+    if(root == null){
+        throw new RuntimeException("Tree is empty");
+    }
+    while(root.left != null){
+        root = root.left;
+    }
+    return root.value;
+}
 	  
 	  
 	  
